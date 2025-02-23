@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <title> To-Do List</title>
+</head>
+<body class="bg-dark">
+    <div class="container  d-flex justify-content-center align-items-center mt-5 mb-5">
+        <div class="todo-app bg-white border-5  rounded-5 mt-5">
+            <h2 class="mt-5 mb-5 text-center">To-Do List <img src="Images/to-do-list.png" class="todo-img"></h2>
+            <div class="todo-list   me-5 ms-5   border-5 rounded-5  mb-5">
+                <label for="task" class="fw-bold ">Task</label>
+                <input  type="text" class=" form-control  border-5 bg-transparent w-100 p-2 mb-4" id="task" placeholder="Add your text">
+
+                <label for="taskStatus" class="fw-bold">Task status</label>
+                <input type="text" class=" form-control border-5 bg-transparent w-100 p-2 mb-4" id="taskStatus" placeholder="Add your text">
+
+                <button onclick="addTask()" type="button" id="addButton" class=" addButton btn btn-dark rounded-5 w-100 mt-2">Add</button>
+
+                <input onkeyup="searchTask(this.value);" class="form-control mt-4 my-3 w-100">
+            </div>
+            <table class="table mb-5">
+                <thead class="text-center">
+                    <th>Task ID</th>
+                    <th>Task</th>
+                    <th>Task status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody class="text-center" id="tableRow">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="Js/script.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
